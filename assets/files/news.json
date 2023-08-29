@@ -1,0 +1,33 @@
+{
+    "articles": [
+      {
+        "title": "Breaking News: Earthquake Hits the West Coast",
+        "description": "A powerful earthquake shook the west coast, causing minor damages to buildings.",
+        "author": "John Doe",
+        "date": "2023-08-03",
+        "imageUrl": "https://akm-img-a-in.tosshub.com/lingo/itne/images/story/202307/earthquake_0-sixteen_nine.jpg?size=948:533"
+      },
+      {
+        "title": "Politics: New Legislation Passed",
+        "description": "The government passed a new legislation impacting various sectors of the economy.",
+        "author": "Jane Smith",
+        "date": "2023-08-03",
+        "imageUrl": "https://akm-img-a-in.tosshub.com/lingo/itne/images/story/202307/earthquake_0-sixteen_nine.jpg?size=948:533"
+      },
+      {
+        "title": "Sports: Team Wins Championship",
+        "description": "The local sports team won the championship after an intense final match.",
+        "author": "Mike Johnson",
+        "date": "2023-08-02",
+        "imageUrl": "https://akm-img-a-in.tosshub.com/lingo/itne/images/story/202307/earthquake_0-sixteen_nine.jpg?size=948:533"
+      },
+      {
+        "title": "Technology: New Smartphone Release",
+        "description": "Tech company unveiled their latest flagship smartphone with advanced features.",
+        "author": "Sarah Lee",
+        "date": "2023-08-02",
+        "imageUrl": "https://akm-img-a-in.tosshub.com/lingo/itne/images/story/202307/earthquake_0-sixteen_nine.jpg?size=948:533"
+      }
+    ]
+  }
+  
