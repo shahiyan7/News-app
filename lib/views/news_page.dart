@@ -45,7 +45,7 @@ class _NewsPageState extends State<NewsPage> {
                    
                         ):CircularProgressIndicator()
                       ),
-                     
+                      SizedBox(height: 8,), 
                       Text(
                         article.title!=null?article.title:'No Title',
                         style: const TextStyle(
@@ -53,10 +53,10 @@ class _NewsPageState extends State<NewsPage> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-     
+                     SizedBox(height: 8,),
                       Text(
                         article.description!=null?article.description:'No Description',
-                        style: const TextStyle(color: Colors.black54),
+                        style: const TextStyle(color: Colors.grey),
                       ),
                     ],
                   ),
