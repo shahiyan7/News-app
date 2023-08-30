@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:news_app/models/article_model.dart';
+import 'package:news_app/views/detail_page.dart';
 
 class NewsPage extends StatefulWidget {
   final List articles;
@@ -29,36 +30,53 @@ class _NewsPageState extends State<NewsPage> {
             itemCount: widget.articles.length,
             itemBuilder: (context, index) {
               final article = widget.articles[index];
-              return Card(
-                child: Container(
-                  margin: const EdgeInsets.all(12),
-                  child: Column(
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(6),
-                        child: article.urlToImage!=null?
-                        Image.network(
-                          article.urlToImage,
-                          height: 200,
-                          width: double.infinity,
-                          fit: BoxFit.cover,
-                   
-                        ):CircularProgressIndicator()
-                      ),
-                      SizedBox(height: 8,), 
-                      Text(
-                        article.title!=null?article.title:'No Title',
-                        style: const TextStyle(
-                          fontSize: 17,
-                          fontWeight: FontWeight.w600,
+              return GestureDetector(
+                onTap: () {
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>DeatilPage(
+                  urlToimage: article.urlToImage!=null?article.urlToImage:'https://static.thenounproject.com/png/504708-200.png',
+                  title: article.title,
+                  description: article.description!=null?article.description:'No Description',
+                  publishedAt: article.publishedAt,
+                  
+               )));
+                },
+                child: Card(
+                  child: Container(
+                    margin: const EdgeInsets.all(12),
+                    child: Column(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(6),
+                          child: article.urlToImage!=null?
+                          Image.network(
+                            article.urlToImage,
+                            height: 200,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+                     
+                          ): Image.network(
+                            'https://static.thenounproject.com/png/504708-200.png',
+                            height: 200,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+                     
+                          ),
                         ),
-                      ),
-                     SizedBox(height: 8,),
-                      Text(
-                        article.description!=null?article.description:'No Description',
-                        style: const TextStyle(color: Colors.grey),
-                      ),
-                    ],
+                        SizedBox(height: 8,), 
+                        Text(
+                          article.title!=null?article.title:'No Title',
+                          style: const TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                       SizedBox(height: 8,),
+                        Text(
+                          article.description!=null?article.description:'No Description',
+                          style: const TextStyle(color: Colors.grey),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               );
